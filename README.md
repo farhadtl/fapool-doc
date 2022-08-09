@@ -8,7 +8,7 @@ https://fapool.ir
 ## نحوه استفاده
 آموزش استفاده از API فاپول به صورت کامل در https://fapool.ir/dev منتشر شده است.
 در ادامه نحوه اتصال محصول به زبان PHP ارائه شده است. 
-
+```
 <?php
 $curl = curl_init();
  
@@ -34,9 +34,7 @@ $response = curl_exec($curl);
  
 curl_close($curl);
 echo $response;
-
-
-
+```
 
 ## دموی محصول
 محصول اکسپرت ورنا از سیستم لایسنس گذاری فاپول استفاده کرده است : https://fapool.ir/file/73200
