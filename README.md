@@ -1,16 +1,15 @@
-# Documentation HTML Template
-A Sample HTML Documentation Template for Wordpress Themes, HTML Templates and Plugins. Built with Bootstrap 3. 
+فروشگاه فایل فاپول | پیشرو در صنعت تجارت محتوای دیجیتال
 
-## Installation
-Download the package as ZIP and edit the HTML and CSS as you like.
+# مستندات فاپول ویژه توسعه دهنگان
+سیستم API فاپول مورد استفاده تمام برنامه نویسان و توسعه دهندگان نرم افزاری است که قصد دارند روی نرم افزار خود امکان لایسنس گذاری، فعالسازی آنلاین و همچنین فروش اشتراک های دوره ای ایجاد کنند و فروش نرم افزار و فعالسازی ان را اتوماتیک انجام دهند. لایسنس گذاری روی نرم افزار یا مدیریت اشتراک های کاربران کار آسانی نیست و نیازمند صرف هزینه و وقت برای خرید تجهیزات سروری و توسعه کد و همچنین تامین امنیت آن می باشد. مفتخریم که اعلام کنیم در فاپول این کار را برای توسعه دهندگان بسیار آسان و با کمترین کدنویسی قابل انجام است و با استفاده از API فاپول می توانید نرم افزار خود را بفروشید و برای فعالسازی نرم افزار کدفعالسازی به مشتری بدهید و یا اشتراک های دوره تعریف کنید و کد فعال سازی لایسنس نرم افزار را ابه صورت اینترنتی با سرور فاپول چک کنید و درصورت صحت کلید فعالسازی نرم افزار را فعال کنید یا اجازه استفاده به مشتری تا پایان اعتبار در محل نصب شده بدهید.
 
-## Demo
-Click this link for a live demo : http://surjithctly.github.io/documentation-html-template/
+## نحوه استفاده
+آموزش استفاده از API فاپول به صورت کامل در fapool.ir/dev منتشر شده است.
+## دموی محصول
+محصول اکسپرت ورنا از سیستم لایسنس گذاری فاپول استفاده کرده است : https://fapool.ir/file/73200
 
-## Donations & Support
-My Brain needs two urgent coffee to continue working. Buy me a coffee or two here: https://opencollective.com/documentation-template
+# اطلاعات بیشتر
+جهت کسب اطلاعات بیشتر در مورد سیستم لایسنس گذاری نرم افزار و فروش اشتراکی محصول میتوانید به صفحه مرتبط در فاپول سر بزنید
+https://fapool.ir/subscription
 
-## Credits
-This is a modified version of [Template Visual's](http://themeforest.net/user/templatevisual?ref=surjithctly&utm_source=github_surjithctly_docs) Documentation : Actual Documentation Link : http://goo.gl/RVwdHE
-
-Browser Testing by [Browserstack](https://www.browserstack.com/)
+فروش فایل / فروشگاه فایل
