@@ -7,6 +7,37 @@ https://fapool.ir
 
 ## نحوه استفاده
 آموزش استفاده از API فاپول به صورت کامل در https://fapool.ir/dev منتشر شده است.
+در ادامه نحوه اتصال محصول به زبان PHP ارائه شده است. 
+
+<?php
+$curl = curl_init();
+ 
+$fapool_token = 'd8a3fb943bb24d044b5ac2a962566f5050f1';
+$fapool_key = '7d49gVg';
+ 
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://fapool.ir/api/v1/licenses/check',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS => array('key' => $fapool_key),
+  CURLOPT_HTTPHEADER => array(
+    "Authorization: Bearer $fapool_token"
+  ),
+));
+ 
+$response = curl_exec($curl);
+ 
+curl_close($curl);
+echo $response;
+
+
+
+
 ## دموی محصول
 محصول اکسپرت ورنا از سیستم لایسنس گذاری فاپول استفاده کرده است : https://fapool.ir/file/73200
 
