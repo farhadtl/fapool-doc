@@ -349,9 +349,9 @@ var_dump($resp);
 
                             <br><br> <hr>
                             <h4 id="Python">روش اتصال و بررسی لایسنس ویژه زبان Python </h4>
-                            <p>توضیحات زبان Python به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>نمونه کد اتصال به سرور فاپول بررسی صحت لایسنس ویژه نرم افزار های Python</p>
+                            <li>عبارت FskR73 لایسنس کاربر می باشد، این کلید را هنگام اجرای نرم افزار باید از کاربر اخذ کنید</li>
+                            <li>به جای عبارت d8a3f6f5050f1 توکن اختصاصی خود ، از پنل فروشندگان را جایگزین کنید</li>
                             <pre class="brush: html">
 import requests
 from requests.structures import CaseInsensitiveDict
@@ -359,7 +359,7 @@ from requests.structures import CaseInsensitiveDict
 url = "https://fapool.ir/api/v1/licenses/check"
 
 headers = CaseInsensitiveDict()
-headers["Authorization"] = "Bearer d8a3fb943bb24d2a962566f5050f1"
+headers["Authorization"] = "Bearer d8a3f6f5050f1"
 headers["Content-Type"] = "application/json"
 
 data = '{"key" : "FskR73"}'
@@ -371,31 +371,31 @@ print(resp.status_code)
                             <!-- end sample code -->
                             <br><br> <hr>
                             <h4 id="Curl">روش اتصال و بررسی لایسنس ویژه زبان Curl/Bash </h4>
-                            <p>توضیحات زبان Curl به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>نمونه کد اتصال به سرور فاپول بررسی صحت لایسنس ویژه نرم افزار های Curl</p>
+                            <li>عبارت FskR73 لایسنس کاربر می باشد، این کلید را هنگام اجرای نرم افزار باید از کاربر اخذ کنید</li>
+                            <li>به جای عبارت d8a3f6f5050f1 توکن اختصاصی خود ، از پنل فروشندگان را جایگزین کنید</li>
                             <pre class="brush: html">
 #!/bin/bash
 
 curl
 -X POST https://fapool.ir/api/v1/licenses/check
--H "Authorization: Bearer d8a3fbbd0690b5ac2a962566f5050f1"
+-H "Authorization: Bearer d8a3f6f5050f1"
 -H "Content-Type: application/json"
 -d "{\"key\" : \"FskR73\"}"
                                 </pre>
                             <!-- end sample code -->
                             <br><br> <hr>
                             <h4 id="JavaScript">روش اتصال و بررسی لایسنس ویژه زبان JavaScript/AJAX </h4>
-                            <p>توضیحات زبان JAVA به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>نمونه کد اتصال به سرور فاپول بررسی صحت لایسنس ویژه نرم افزار های JavaScript</p>
+                            <li>عبارت FskR73 لایسنس کاربر می باشد، این کلید را هنگام اجرای نرم افزار باید از کاربر اخذ کنید</li>
+                            <li>به جای عبارت d8a3f6f5050f1 توکن اختصاصی خود ، از پنل فروشندگان را جایگزین کنید</li>
                             <pre class="brush: html">
 var url = "https://fapool.ir/api/v1/licenses/check";
 
 var xhr = new XMLHttpRequest();
 xhr.open("POST", url);
 
-xhr.setRequestHeader("Authorization", "Bearer d8a3fb943b6f5050f1");
+xhr.setRequestHeader("Authorization", "Bearer d8a3f6f5050f1");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.onreadystatechange = function () {
@@ -410,15 +410,15 @@ xhr.send(data);
                             <!-- end sample code -->
                             <br><br> <hr>
                             <h4 id="JAVA">روش اتصال و بررسی لایسنس ویژه زبان JAVA </h4>
-                            <p>توضیحات زبان JAVA به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>نمونه کد اتصال به سرور فاپول بررسی صحت لایسنس ویژه نرم افزار های JAVA</p>
+                            <li>عبارت FskR73 لایسنس کاربر می باشد، این کلید را هنگام اجرای نرم افزار باید از کاربر اخذ کنید</li>
+                            <li>به جای عبارت d8a3f6f5050f1 توکن اختصاصی خود ، از پنل فروشندگان را جایگزین کنید</li>
                             <pre class="brush: html">
 URL url = new URL("https://fapool.ir/api/v1/licenses/check");
 HttpURLConnection http = (HttpURLConnection)url.openConnection();
 http.setRequestMethod("POST");
 http.setDoOutput(true);
-http.setRequestProperty("Authorization", "Bearer d8a3fb943bb66f5050f1");
+http.setRequestProperty("Authorization", "Bearer d8a3f6f5050f1");
 http.setRequestProperty("Content-Type", "application/json");
 
 String data = "{\"key\" : \"FskR73\"}";
@@ -435,16 +435,16 @@ http.disconnect();
 
                             <br><br> <hr>
                             <h4 id="Cnet">روش اتصال و بررسی لایسنس ویژه زبان C#/NET </h4>
-                            <p>توضیحات زبان C#/NET به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>نمونه کد اتصال به سرور فاپول بررسی صحت لایسنس ویژه نرم افزار های C#/NET</p>
+                            <li>عبارت FskR73 لایسنس کاربر می باشد، این کلید را هنگام اجرای نرم افزار باید از کاربر اخذ کنید</li>
+                            <li>به جای عبارت d8a3f6f5050f1 توکن اختصاصی خود ، از پنل فروشندگان را جایگزین کنید</li>
                             <pre class="brush: html">
 var url = "https://fapool.ir/api/v1/licenses/check";
 
 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
 httpRequest.Method = "POST";
 
-httpRequest.Headers["Authorization"] = "Bearer d8a3fb990b5ac2a962566f5050f1";
+httpRequest.Headers["Authorization"] = "Bearer d8a3f6f5050f1";
 httpRequest.ContentType = "application/json";
 
 var data = "{\"key\" : \"FskR73\"}";
