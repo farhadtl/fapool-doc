@@ -124,7 +124,7 @@
                                     <li><a href="#cTrader">ویژه cTrader</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#line10">تاریخچه تسخه ها</a></li>
+                            <li><a href="#line10">تاریخچه نسخه ها</a></li>
                             <li><a href="#line11">آموزش های کاربردی</a></li>
                             <li><a href="https://t.me/farhadtl">پشتیبانی API</a></li>
                             <br>
@@ -147,6 +147,7 @@
                                                 <li><strong>نسخه مستندات : </strong> v 1.0</li>
                                                 <li><strong>تاریخ بروزرسانی : </strong> 15 مرداد 1401</li>
                                                 <li><strong>شرایط استفاده : </strong> <a href="/page/قوانین-مقررات" target="_blank">مشاهده قوانین و مقررات فاپول</a></li>
+                                                <li><strong>نسخه github : </strong> <a href="https://github.com/farhadtl/fapool-doc" target="_blank">جهت تکمیل مستندات توسعه دهندگان، به گیت هاب مراجعه کنید</a></li>
                                             </ul>
                                         </div>
 
@@ -465,11 +466,63 @@ Console.WriteLine(httpResponse.StatusCode);
 
                             <br><br> <hr>
                             <h4 id="MQL5">روش اتصال و بررسی لایسنس ویژه زبان MQL5 </h4>
-                            <p>توضیحات زبان MQL5 به زودی در این قسمت قرار خواهد گرفت. چنانچه شما نمونه کدی با این زبان نوشته اید و دارای عملکرد صحیح است احتراما جهت درج در این صفحه برای ما ارسال کنید</p>
-                            <li>نکته اول</li>
-                            <li>نکته دوم</li>
+                            <p>با این روش به راحتی می توانید اکسپرت های MQL5 را قفل گذاری کنید و ضمن محافظت از کپی نشدن آن، نبست به فروش اشتراک های ماهیانه اقدام کنید</p>
+                            <li>لایسنس فاپول به صورت input از کاربر اخذ شود</li>
+                            <li>برای عدم ایجاد مزاحمت برای کاربر میتوانید بررسی را فقط یکبار در هنگام اجرا شدن اکسپرت از کاربر درخواست کنید</li>
+                            <li>به جای عبارت d8a3fb06f5050f1 در کد زیر، توکن اختصاصی خود را از پنل فروشندگان جایگزین نمایید</li>
+                            <li>برای چک کردن لایسنس کاربر باید لینک "https://fapool.ir/api/v1/licenses/check" را از منوی tools/expert advisor وارد و فعال کند</li>
                             <pre class="brush: html">
-                                ......
+input string    Fapool_Token = 0; // لایسنس فاپول
+bool access=false;
+
+int OnInit()
+{
+//--- create timer
+
+   EventSetTimer(60*60);
+   if(Fapool_Token==0){
+   Alert("لطفا لایسنس دریافتی از سایت فاپول را وارد نمایید");
+   return(INIT_SUCCEEDED);
+   }
+   CJAVal Myjason;
+   char post[];
+   char res_data[];
+   string res_headers=NULL;
+   string key = "{\"key\":\"" + Fapool_Token + "\"}";
+   ArrayResize(post,StringToCharArray(key,post,0,WHOLE_ARRAY,CP_UTF8)-1);
+   string header="Content-Type:application/json;\r\nAuthorization: Bearer d8a3fb06f5050f1";
+   int r=WebRequest("POST","https://fapool.ir/api/v1/licenses/check",header,5000,post,res_data,res_headers);
+   Myjason.Deserialize(res_data);
+   Print("r=",r);
+
+   if(r==404)
+   {
+      Alert("متاسفانه این لایسنس معتبر نیست، لطفا از فاپول لایسنس خود را دریافت نمایید");
+   }
+   else if(r==1001){
+   Alert("اکسپرت امکان دسترسی به اینترنت ندارد، لطفا اینترنت خود را بررسی نمایید");
+   }
+   else if(r==-1){
+   Alert("لینک بررسی لایسنس در تنظیمات وارد نشده است");
+   }
+   else if(r==410){
+   Alert("اشتراک شما به پایان رسیده است، لطفا با تمدید اشتراک از سایت فاپول ، لایسنس جدید را وارد نمایید.");
+   }
+   else if(r==420){
+   Alert("تعداد کاربران استفاده کننده از اکسپرت بیش از حد  مجاز است، لطفا از نشر غیرقانونی اکسپرت خودداری بفرمایید");
+   }
+   else if(r==200)
+   {
+         access=true;
+        // shartha inja darj shavad
+      }
+      else{
+      Alert("error ", r);
+      }
+//---
+   return(INIT_SUCCEEDED);
+}
+
                                 </pre>
                             <!-- end sample code -->
 
@@ -516,61 +569,17 @@ Console.WriteLine(httpResponse.StatusCode);
                         <div class="row">
                             <div class="col-md-12">
 
-                                <p>You can find the version history (changelog.txt) file on <strong>yourthemename-full.zip</strong> folder or you can check changelog on theme sale page.</p>
-                                <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+                                <p>...</p>
 
                                 <hr>
 
-                                <h4>Changelog</h4>
+                                <h4>تغییرات</h4>
 
-                                <pre class="brush: html">
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.4 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-
-                                        - new revolution slider plugin version
-                                        - fixed security issue with xss vulnerability
-                                        - improved demo importer for certain server environments
-                                        - updated WooCommerce template files for the outdated message in system status
-                                        - added suhosin check in system status
-                                        - added information that explains ZipArchive is required on your server for importing demos
-                                        - portfolio Grid template improvement
-                                        - added more information to demo popup message for individual demo requirements
-                                        - RTL style improvements
-                                        - breadcrumb function improved for various areas
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.3 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-                                        - fixed responsive / retina issue for larger logos
-                                        - fusion slider now uses responsive headings all the time
-                                        - dropped custom Avada styles for select boxes in IE since it is not supported
-                                        - fixed compatibility issue with Category Order and Taxonomy Terms Order plugin
-                                        - fixed issue of full width background being affected by padding options
-                                        - tested and fixed hellobar issue
-                                        - typography settings now apply to single post pages
-                                        - improved smooth scroll in certain situations
-                                        - youtube & vimeo videos will show at normal size in light box as long as video embed link is not used
-                                        - fixed issue of â€œfixedâ€ featured image mode not working for carousels / recent work
-                                        - fixed issue of header tagline font not working with font options
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.2 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-                                        - fixed formatting issues with Turkish language files
-                                        - letter spacing menu option improvement
-                                        - improved fusion slider max content width setting
-                                        - removed the â€œdisable first featured image on productsâ€ setting since it does not apply
-                                        - improved portfolio featured image loading
-                                        - removed encoding from tracking code, space before head, space before body, and custom CSS to stop it from parsing code within TO and removing special characters e.g. +
-                                        - woo login box now shows login fields for logged out users
-                                        - woo cart / my account links now show on mobile
-                                        - fixed button styling issue with gravity forms
-
-
-                                      </pre>
-
+                                <h5> نسخه 1.0 / 15 مرداد 1401</h5>
+                                <ul>
+                                <li>+ نسخه اولیه مستندات در سایت و گیت هاب بارگزاری شد</li>
+                                <li>+ نمونه کدهای آماده برای زبان های پایه افزوده شد</li>
+                                </ul>
                             </div>
                         </div>
                         <!-- end row -->
